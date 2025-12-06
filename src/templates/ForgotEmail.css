@@ -1,0 +1,438 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.forgot-container {
+    background-color: #202124;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #e8eaed;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    padding: 20px;
+    position: relative;
+}
+
+.google-logo {
+    margin-bottom: 40px;
+    width: 60px;
+    height: 60px;
+}
+
+.google-logo svg {
+    width: 100%;
+    height: 100%;
+}
+
+.forgot-content {
+    display: flex;
+    gap: 100px;
+    max-width: 1200px;
+    width: 100%;
+    background: #000000;
+    border-radius: 48px;
+    padding: 90px 100px;
+}
+
+.forgot-left {
+    flex: 0 0 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.forgot-title {
+    font-size: 48px;
+    font-weight: 400;
+    margin-bottom: 18px;
+    color: #ffffff;
+    line-height: 1.2;
+}
+
+.forgot-subtitle {
+    font-size: 16px;
+    color: #9aa0a6;
+    margin-bottom: 0;
+}
+
+.forgot-right {
+    flex: 1;
+    max-width: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 24px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-label {
+    font-size: 13px;
+    color: #8ab4f8;
+    font-weight: 500;
+    letter-spacing: 0.4px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 16px 16px;
+    background-color: #000000;
+    border: 2px solid #5f6368;
+    border-radius: 6px;
+    color: #ffffff;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.2s;
+    font-family: inherit;
+}
+
+.form-input:focus {
+    border-color: #8ab4f8;
+    background-color: #1a1b1d;
+}
+
+.form-input::placeholder {
+    color: #9aa0a6;
+}
+
+.button-group-forgot {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.back-button {
+    background-color: transparent;
+    color: #8ab4f8;
+    border: 1px solid #5f6368;
+    padding: 12px 40px;
+    border-radius: 24px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.back-button:hover {
+    background-color: #3c4043;
+    border-color: #8ab4f8;
+}
+
+.next-button-forgot {
+    background-color: #8ab4f8;
+    color: #1a1b1d;
+    border: none;
+    padding: 12px 40px;
+    border-radius: 24px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.next-button-forgot:hover {
+    background-color: #aecbfa;
+}
+
+.login-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #202124;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #3c4043;
+}
+
+.language-select {
+    background-color: transparent;
+    color: #9aa0a6;
+    border: none;
+    font-size: 12px;
+    cursor: pointer;
+    outline: none;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: #9aa0a6;
+    text-decoration: none;
+    font-size: 12px;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: #e8eaed;
+}
+
+/* Responsive Breakpoints */
+
+@media (max-width: 1439px) and (min-width: 1024px) {
+    .google-logo {
+        margin-bottom: 35px;
+        width: 55px;
+    }
+
+    .forgot-content {
+        gap: 90px;
+        max-width: 1100px;
+        padding: 80px 90px;
+    }
+
+    .forgot-left {
+        flex: 0 0 320px;
+    }
+
+    .forgot-title {
+        font-size: 44px;
+        margin-bottom: 16px;
+    }
+
+    .forgot-subtitle {
+        font-size: 15px;
+    }
+
+    .forgot-right {
+        max-width: 500px;
+        gap: 22px;
+    }
+
+    .form-label {
+        font-size: 12px;
+    }
+
+    .form-input {
+        padding: 15px 15px;
+        font-size: 15px;
+    }
+
+    .button-group-forgot {
+        margin-top: 35px;
+    }
+
+    .back-button,
+    .next-button-forgot {
+        padding: 11px 38px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 768px) {
+    .google-logo {
+        margin-bottom: 30px;
+        width: 50px;
+    }
+
+    .forgot-content {
+        flex-direction: column;
+        gap: 40px;
+        max-width: 100%;
+        padding: 60px 50px;
+        border-radius: 35px;
+    }
+
+    .forgot-left {
+        flex: 1;
+    }
+
+    .forgot-title {
+        font-size: 38px;
+        margin-bottom: 14px;
+    }
+
+    .forgot-subtitle {
+        font-size: 14px;
+    }
+
+    .forgot-right {
+        flex: 1;
+        max-width: 100%;
+        gap: 20px;
+    }
+
+    .form-label {
+        font-size: 12px;
+    }
+
+    .form-input {
+        padding: 14px 14px;
+        font-size: 14px;
+        border-width: 1px;
+    }
+
+    .button-group-forgot {
+        margin-top: 30px;
+    }
+
+    .back-button,
+    .next-button-forgot {
+        padding: 10px 35px;
+        font-size: 13px;
+        border-radius: 22px;
+    }
+}
+
+@media (max-width: 767px) and (min-width: 480px) {
+    .google-logo {
+        margin-bottom: 25px;
+        width: 48px;
+    }
+
+    .forgot-content {
+        flex-direction: column;
+        gap: 35px;
+        max-width: 100%;
+        padding: 45px 35px;
+        border-radius: 30px;
+    }
+
+    .forgot-left {
+        flex: 1;
+    }
+
+    .forgot-title {
+        font-size: 32px;
+        margin-bottom: 12px;
+    }
+
+    .forgot-subtitle {
+        font-size: 13px;
+    }
+
+    .forgot-right {
+        flex: 1;
+        max-width: 100%;
+        gap: 18px;
+    }
+
+    .form-label {
+        font-size: 11px;
+    }
+
+    .form-input {
+        padding: 13px 13px;
+        font-size: 13px;
+        border-width: 1px;
+    }
+
+    .button-group-forgot {
+        margin-top: 25px;
+        gap: 10px;
+    }
+
+    .back-button,
+    .next-button-forgot {
+        padding: 9px 32px;
+        font-size: 12px;
+        border-radius: 20px;
+    }
+}
+
+@media (max-width: 479px) {
+    .google-logo {
+        margin-bottom: 20px;
+        width: 45px;
+    }
+
+    .forgot-content {
+        flex-direction: column;
+        gap: 30px;
+        max-width: 100%;
+        padding: 35px 25px;
+        border-radius: 25px;
+    }
+
+    .forgot-left {
+        flex: 1;
+    }
+
+    .forgot-title {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+    .forgot-subtitle {
+        font-size: 12px;
+    }
+
+    .forgot-right {
+        flex: 1;
+        max-width: 100%;
+        gap: 16px;
+    }
+
+    .form-label {
+        font-size: 10px;
+    }
+
+    .form-input {
+        padding: 12px 12px;
+        font-size: 12px;
+        border-width: 1px;
+    }
+
+    .button-group-forgot {
+        margin-top: 20px;
+        gap: 8px;
+    }
+
+    .back-button,
+    .next-button-forgot {
+        padding: 8px 28px;
+        font-size: 11px;
+        border-radius: 20px;
+    }
+}
+
+@media (max-width: 359px) {
+    .google-logo {
+        margin-bottom: 18px;
+        width: 40px;
+    }
+
+    .forgot-content {
+        gap: 20px;
+        padding: 25px 18px;
+        border-radius: 20px;
+    }
+
+    .forgot-title {
+        font-size: 24px;
+        margin-bottom: 8px;
+    }
+
+    .forgot-subtitle {
+        font-size: 11px;
+    }
+
+    .form-input {
+        padding: 11px 11px;
+        font-size: 11px;
+    }
+
+    .button-group-forgot {
+        margin-top: 15px;
+    }
+
+    .back-button,
+    .next-button-forgot {
+        padding: 7px 24px;
+        font-size: 10px;
+    }
+}
