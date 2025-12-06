@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Login from "./templates/Login.jsx";
 import CreateAccount from "./templates/CreateAccount.jsx";
 import ForgotEmail from "./templates/ForgotEmail.jsx";
